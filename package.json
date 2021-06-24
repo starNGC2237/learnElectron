@@ -1,0 +1,52 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "build": {
+    "appId": "com.index.app",
+    "mac": {
+      "target": ["dmg","zip"]
+    },
+    "win": {
+      "target": ["nsis","zip"],
+      "icon": "./assets/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "guid": "zhilutianji",
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./assets/favicon.ico",
+      "uninstallerIcon": "./assets/favicon.ico",
+      "installerHeaderIcon": "./assets/favicon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "idea"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": " electron-builder --dir ",
+    "dist": " electron-builder --win --x64",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "zhilutianji",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^13.1.4",
+    "electron-builder": "^22.11.7"
+  },
+  "dependencies": {
+    
+  }
+}
